@@ -16,7 +16,7 @@
 ###  Step 1. 도메인, SSL 설정
 
 1. `traefik.yaml` 을 열어 `Challenge HTTP` 섹션의  `email:`  을 수정 
-2. `docker-compose.yaml` 파일을 열어 `- bitbucket.idtplatteer.com` 에 Bitbucket 도메인을 입력 
+2. `docker-compose.yaml` 파일을 열어 <YOUR_DOMAIN> 에 Bitbucket 도메인을 입력 
 
 ###  Step 2. Bitbucket 배포
 

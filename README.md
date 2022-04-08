@@ -1,15 +1,6 @@
 # bitbucket_server 설치
 
-## Docker 설치
 
-```console
-  $ sudo su 
-  $ git clone https://github.com/kin3303/bitbucket_server.git
-  $ cd bitbucket_server
-  $ git checkout master
-  $ chmod +x install.sh && ./install.sh
-  $ docker swarm init
-```
 
 ## 준비물
  
@@ -22,6 +13,17 @@
 필요한  퍼블릭 도메인 목록은 아래와 같다.
 
 - Bitbucket 접근용 도메인 
+
+Docker 가 설치되어 있어야 하며 미설치시 아래 스크립트로 설치한다.
+
+```console
+  $ sudo su 
+  $ git clone https://github.com/kin3303/bitbucket_server.git
+  $ cd bitbucket_server
+  $ git checkout master
+  $ chmod +x install.sh && ./install.sh
+  $ docker swarm init
+```
 
 ## Bitbucket Server 설치 
  

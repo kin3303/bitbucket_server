@@ -10,10 +10,9 @@
   $ sysctl -w fs.file-max=65536
   $ ulimit -n 65536
   $ ulimit -u 4096
-  $ git clone https://github.com/kin3303/DDI_OPENSHIFT.git
-  $ cd DDI_OPENSHIFT
-  $ git checkout testEnv
-  $ cd nexus
+  $ git clone https://github.com/kin3303/bitbucket_server.git
+  $ cd bitbucket_server
+  $ git checkout master
   $ chmod +x install.sh && ./install.sh
   $ docker swarm init
 ```

@@ -11,6 +11,18 @@
   $ docker swarm init
 ```
 
+## 준비물
+ 
+필요한 포트 목록은 아래와 같다.
+
+- Bitbucket 를 위해 80, 443 포트 Open 이 필요하다.
+- Portainer 를 위해 9000 포트 Open 이 필요하다.
+- Traefik 을 위해 8080 포트 Open 이 필요하다.
+
+필요한  퍼블릭 도메인 목록은 아래와 같다.
+
+- Bitbucket 접근용 도메인 
+
 ## Bitbucket Server 설치 
  
 ###  Step 1. 도메인, SSL 설정

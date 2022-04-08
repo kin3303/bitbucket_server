@@ -17,7 +17,7 @@ services:
         constraints: [node.role==manager]
 
   bitbucket:
-    image: atlassian/bitbucket-server:
+    image: atlassian/bitbucket-server:7.9
     labels:
       - "traefik.enable=true"
       # Routers 

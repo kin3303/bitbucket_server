@@ -22,6 +22,5 @@
  
 ###  Step 1. 도메인, SSL 설정
 
-1. 테스트할 도메인을 두 개 준비( 하나는 nexus 하나는 docker registry )
-2. `traefik.yaml` 을 열어 `Challenge HTTP` 섹션의  `email:`  을 수정 
-3. `docker-compose.yaml` 파일을 열어 `- bitbucket.idtplatteer.com` 에 Bitbucket 도메인을 입력 
+1. `traefik.yaml` 을 열어 `Challenge HTTP` 섹션의  `email:`  을 수정 
+2. `docker-compose.yaml` 파일을 열어 `- bitbucket.idtplatteer.com` 에 Bitbucket 도메인을 입력 

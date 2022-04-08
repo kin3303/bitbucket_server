@@ -21,7 +21,7 @@ services:
     labels:
       - "traefik.enable=true"
       # Routers 
-      - "traefik.http.routers.bitbucket.rule=Host(`bitbucket.idtplateer.com`)"
+      - "traefik.http.routers.bitbucket.rule=Host(`<YOUR_DOMAIN>`)"
       - "traefik.http.routers.bitbucket.service=bitbucket"
       - "traefik.http.routers.bitbucket.entrypoints=websecure"
       - "traefik.http.routers.bitbucket.tls.certresolver=myresolver" 

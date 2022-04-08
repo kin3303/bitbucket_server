@@ -17,6 +17,10 @@
 
 1. `traefik.yaml` 을 열어 `Challenge HTTP` 섹션의  `email:`  을 수정 
 2. `docker-compose.yaml` 파일을 열어 <YOUR_DOMAIN> 에 Bitbucket 도메인을 입력 
+3. `docker-compose.yaml` 파일을 열어 DB 설정을 수정한다.
+     - 'POSTGRES_USER=bitbucketdb' 
+     - 'POSTGRES_PASSWORD=password'
+     - 'POSTGRES_DB=bitbucketdb'
 
 ###  Step 2. Bitbucket 배포
 
@@ -40,3 +44,7 @@
 ```
  Traefik  - http://<YOUR_HOST>:8080
 ```
+
+### Step 5. DB 설정
+
+- https://<YOUR_DOMAIN> 으로 접속하여 앞서 수정한 설정으로 변경한다.

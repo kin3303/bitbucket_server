@@ -34,3 +34,11 @@
 ```
   Portainer - http://your-ip-address:9000
 ```
+
+### Step 4. Traefik 확인
+
+- 도메인에 대한 무료 SSL 인증과 연장을 수행하며 Web Server 로써 Reverse Proxy 역할을 하는 Traefik 이 설치된다.
+
+```
+ Traefik  - http://<YOUR_HOST>:8080
+```

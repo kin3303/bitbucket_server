@@ -44,8 +44,7 @@ services:
       - 'POSTGRES_ENCODING=UNICODE'
       - 'POSTGRES_COLLATE=C'
       - 'POSTGRES_COLLATE_TYPE=C'
-      
- 
+
   portainer:
     image: portainer/portainer:latest
     command: -H unix:///var/run/docker.sock

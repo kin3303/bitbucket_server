@@ -1,1 +1,31 @@
 
+version: '3.3'
+
+services:
+  traefik:
+    image: traefik:v2.3
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./letsencrypt:/letsencrypt
+      - ./traefik.yaml:/etc/traefik/traefik.yaml
+    deploy:
+      placement:
+        constraints: [node.role==manager]
+
+  portainer:
+    image: portainer/portainer:latest
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role==manager]
+        
+volumes:
+  test-volume:

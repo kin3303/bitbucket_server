@@ -41,7 +41,7 @@ Docker 가 설치되어 있어야 하며 미설치시 아래 스크립트로 설
 ```console
   $ docker stack rm bitbucket
   $ rm -rf /var/lib/docker/volumes/bitbucket-data
-  $  rm -rf /var/lib/docker/volumes/postgresql-data/
+  $ rm -rf /var/lib/docker/volumes/postgresql-data/
   $ docker stack deploy -c docker-compose.yaml bitbucket 
 ```
 

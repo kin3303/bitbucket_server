@@ -1,6 +1,6 @@
 # bitbucket_server 설치
 
-## Step 1 > Docker 설치
+## Docker 설치
 
 - Tested with 24GB memory, 8 cores,  Ubuntu 16.04 LTS  
 
@@ -24,3 +24,18 @@
 
 1. `traefik.yaml` 을 열어 `Challenge HTTP` 섹션의  `email:`  을 수정 
 2. `docker-compose.yaml` 파일을 열어 `- bitbucket.idtplatteer.com` 에 Bitbucket 도메인을 입력 
+
+###  Step 2. Bitbucket 배포
+
+```console
+  $ docker stack rm bitbucket
+  $ docker stack deploy -c docker-compose.yaml bitbucket 
+```
+
+### Step 3. Potainer 활성화
+
+- Portainer 는 5분 내에 admin 계정을 생성해야 사용 가능하다. 
+
+```
+  Portainer - http://your-ip-address:9000
+```

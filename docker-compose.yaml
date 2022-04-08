@@ -16,6 +16,36 @@ services:
       placement:
         constraints: [node.role==manager]
 
+  bitbucket:
+    image: atlassian/bitbucket-server:
+    labels:
+      - "traefik.enable=true"
+      # Routers 
+      - "traefik.http.routers.bitbucket.rule=Host(`bitbucket.idtplateer.com`)"
+      - "traefik.http.routers.bitbucket.service=bitbucket"
+      - "traefik.http.routers.bitbucket.entrypoints=websecure"
+      - "traefik.http.routers.bitbucket.tls.certresolver=myresolver" 
+      # Services
+      - "traefik.http.services.bitbucket.loadbalancer.server.port=7990"
+    depends_on:
+      - db
+    volumes:
+      - bitbucketdata:/var/atlassian/application-data/bitbucket 
+      
+  db:
+    image: postgres:11
+    volumes:
+      - postgresqldata:/var/lib/postgresql/data
+    environment:
+      - 'POSTGRES_USER=bitbucketdb' 
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_DB=bitbucketdb'
+      - 'POSTGRES_ENCODING=UTF8'
+      - 'POSTGRES_ENCODING=UNICODE'
+      - 'POSTGRES_COLLATE=C'
+      - 'POSTGRES_COLLATE_TYPE=C'
+      
+ 
   portainer:
     image: portainer/portainer:latest
     command: -H unix:///var/run/docker.sock
@@ -27,5 +57,10 @@ services:
       placement:
         constraints: [node.role==manager]
         
-volumes:
-  test-volume:
+volumes: 
+  bitbucketdata:
+    external:
+      name: bitbucket-data
+  postgresqldata:
+    external:
+      name: postgresql-data

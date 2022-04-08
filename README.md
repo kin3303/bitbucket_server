@@ -32,7 +32,7 @@
 - Portainer 는 5분 내에 admin 계정을 생성해야 사용 가능하다. 
 
 ```
-  Portainer - http://your-ip-address:9000
+  Portainer - http://<YOUR_HOST>:9000
 ```
 
 ### Step 4. Traefik 확인

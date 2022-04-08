@@ -47,4 +47,4 @@
 
 ### Step 5. DB 설정
 
-- https://<YOUR_DOMAIN> 으로 접속하여 앞서 수정한 설정으로 변경한다.
+- https://<YOUR_DOMAIN> 으로 접속하여 Step1 에서 수정한 설정 (DB이름, 사용자, 패스워드)으로 BitBucket 서버와 DB 를 연결한다.
